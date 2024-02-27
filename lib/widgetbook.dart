@@ -38,12 +38,39 @@ class HotReload extends StatelessWidget {
             WidgetbookComponent(
               name: 'Button',
               useCases: [
-                // * Default Button
+                // * Default Button No Sent Param *** Ex1 ***
                 WidgetbookUseCase(
                     name: 'Default Button',
                     builder: (context) => const Button()),
 
-                // * Example Button
+                // * Example Button Sent Param All ***Ex2***
+                WidgetbookUseCase(
+                    name: 'Default Button',
+                    builder: (context) => const Button(
+                          title: 'Button',
+                          backgroundColor: Color(0xFFFFFFFF),
+                          width: 150,
+                          height: 50,
+                          textStyle: TextStyle(
+                            color: Color(0xFF000000),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                          fontColor: Color(0xFF000000),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          // TOdo onPress:()=>{},
+                          borderRadius: 30.0,
+                          borderRadiusColor: Color(0xFF000000),
+                          disableColor: Color(0xFFD9D9D9),
+                          loadingIconColor: Color(0xFFD9D9D9),
+                          strokeWidth: 4.0,
+                          loadingIconWidth: 0.0,
+                          statusButton:
+                              'enable', // 'enable'  , 'disable' , 'loading'
+                        )),
+
+                // * Example Button ***Ex3***
                 WidgetbookUseCase(
                     name: 'Example Button',
                     builder: (context) => const Button(
@@ -59,6 +86,7 @@ class HotReload extends StatelessWidget {
                           statusButton: 'enable',
                         )),
 
+                // * Example TextStyle ***Ex4***
                 WidgetbookUseCase(
                     name: 'Example TextStyle',
                     builder: (context) => const Button(
@@ -69,6 +97,7 @@ class HotReload extends StatelessWidget {
                           ),
                         )),
 
+                // * Example Loading ***Ex5***
                 WidgetbookUseCase(
                     name: 'Example Loading',
                     builder: (context) => const Button(
@@ -78,6 +107,7 @@ class HotReload extends StatelessWidget {
                           loadingIconColor: Color.fromARGB(255, 1, 250, 34),
                         )),
 
+                // * Example Disable ***Ex6***
                 WidgetbookUseCase(
                     name: 'Example Disable',
                     builder: (context) => const Button(
