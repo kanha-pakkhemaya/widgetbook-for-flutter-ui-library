@@ -36,95 +36,54 @@ class HotReload extends StatelessWidget {
           name: 'Widgets',
           children: [
             WidgetbookComponent(
-              name: 'Th Button',
+              name: 'Button',
               useCases: [
-                // * no sent param
+                // * Default Button
                 WidgetbookUseCase(
-                    name: 'Button no sent param',
+                    name: 'Default Button',
                     builder: (context) => const Button()),
 
-                // * sent title
+                // * Example Button
                 WidgetbookUseCase(
-                    name: 'Button sent title',
-                    builder: (context) => const Button(title: 'sent title')),
-
-                // * sent backgroundColor
-                WidgetbookUseCase(
-                    name: 'Button sent backgroundColor',
-                    builder: (context) =>
-                        const Button(backgroundColor: Color(0xFF3A8A1F))),
-
-                // * sent width
-                WidgetbookUseCase(
-                    name: 'Button sent width',
-                    builder: (context) => const Button(width: 300)),
-
-                // * sent TextStyle
-                WidgetbookUseCase(
-                    name: 'Button sent TextStyle',
+                    name: 'Example Button',
                     builder: (context) => const Button(
-                            textStyle: TextStyle(
-                          color: Color.fromARGB(255, 235, 5, 5),
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                        ))),
+                          title: 'Button',
+                          backgroundColor: Color.fromARGB(255, 176, 233, 101),
+                          width: 150,
+                          height: 50,
+                          fontColor: Color.fromARGB(255, 242, 3, 250),
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          borderRadius: 30.0,
+                          borderRadiusColor: Color.fromARGB(255, 194, 48, 48),
+                          statusButton: 'enable',
+                        )),
 
-                // * sent fontColor
                 WidgetbookUseCase(
-                    name: 'Button sent fontColor',
-                    builder: (context) =>
-                        const Button(fontColor: Color(0xFF3A8A1F))),
-
-                // * sent fontSize
-                WidgetbookUseCase(
-                    name: 'Button sent fontSize',
-                    builder: (context) => const Button(fontSize: 25.0)),
-
-                // * sent fontWeight
-                WidgetbookUseCase(
-                    name: 'Button sent fontWeight',
-                    builder: (context) =>
-                        const Button(fontWeight: FontWeight.bold)),
-
-                // * sent borderRadius
-                WidgetbookUseCase(
-                    name: 'Button sent borderRadius',
-                    builder: (context) => const Button(borderRadius: 10)),
-
-                // * sent borderRadiusColor
-                WidgetbookUseCase(
-                    name: 'Button sent borderRadiusColor',
+                    name: 'Example TextStyle',
                     builder: (context) => const Button(
-                        borderRadiusColor: Color.fromARGB(255, 202, 16, 16))),
+                          textStyle: TextStyle(
+                            color: Color.fromARGB(255, 248, 3, 3),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        )),
 
-                // * sent loading
                 WidgetbookUseCase(
-                    name: 'Button sent loading',
+                    name: 'Example Loading',
                     builder: (context) => const Button(
-                        statusButton: 'loading',
-                        strokeWidth: 4.0,
-                        loadingIconWidth: 0.0,
-                        loadingIconColor: Color.fromARGB(255, 202, 16, 16))),
+                          statusButton: 'loading',
+                          strokeWidth: 4.0,
+                          loadingIconWidth: 0.0,
+                          loadingIconColor: Color.fromARGB(255, 1, 250, 34),
+                        )),
 
-                // * sent disable
                 WidgetbookUseCase(
-                    name: 'Button sent disable',
-                    builder: (context) =>
-                        const Button(statusButton: 'disable')),
-
-                // * sent enable
-                WidgetbookUseCase(
-                    name: 'Button sent enable',
-                    builder: (context) => const Button(statusButton: 'enable')),
-
-                // * sent strokeWidth
-                WidgetbookUseCase(
-                    name: 'Button sent strokeWidth',
-                    builder: (context) => const Button(strokeWidth: 10.0)),
-
-                // Todo call function
-                // widget.onPress?.call()
-                // onPress: ()=>{}
+                    name: 'Example Disable',
+                    builder: (context) => const Button(
+                          statusButton: 'disable',
+                          disableColor: Color(0xFFD9D9D9),
+                        )),
               ],
             ),
           ],
