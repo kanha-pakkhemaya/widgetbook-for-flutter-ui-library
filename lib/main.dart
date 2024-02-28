@@ -38,10 +38,32 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Button(
-          statusButton: 'disable',
-          disableColor: Color(0xFFD9D9D9),
+          onPressed: () {
+            /// Your onTap logic here
+          },
+          title: 'Button',
+          backgroundColor: const Color(0xFFFFFFFF),
+          width: 150,
+          height: 50,
+          textStyle: const TextStyle(
+            color: Color(0xFF000000),
+            fontSize: 14,
+            fontWeight: FontWeight.normal,
+          ),
+          fontColor: const Color(0xFF000000),
+          fontSize: 14,
+          fontWeight: FontWeight.normal,
+          borderRadius: 30.0,
+          borderRadiusColor: const Color(0xFF000000),
+          disableColor: const Color(0xFFD9D9D9),
+          loadingIconColor: const Color(0xFFD9D9D9),
+          strokeWidth: 4.0,
+          loadingIconWidth: 0.0,
+          statusButton: 'loading',
+
+          /// 'enable'  , 'disable' , 'loading'
         ),
       ),
     );
