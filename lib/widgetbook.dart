@@ -40,12 +40,12 @@ class HotReload extends StatelessWidget {
               useCases: [
                 // * Default Button No Sent Param *** Ex1 ***
                 WidgetbookUseCase(
-                    name: 'Default', builder: (context) => const Button()),
+                    name: 'Default', builder: (context) => const UiButton()),
 
                 // * Example Button Sent Param All ***Ex2***
                 WidgetbookUseCase(
                     name: 'Loading',
-                    builder: (context) => Button(
+                    builder: (context) => UiButton(
                           onPressed: () {
                             /// Your onTap logic here
                           },
@@ -75,9 +75,41 @@ class HotReload extends StatelessWidget {
                 WidgetbookUseCase(
                     name: 'Disable',
                     builder: (context) =>
-                        const Button(statusButton: 'disable')),
+                        const UiButton(statusButton: 'disable')),
               ],
             ),
+            // ---------------------------------------------------------------------
+            // WidgetbookComponent(
+            //   name: 'Example UiBottomSheet',
+            //   useCases: [
+            //     // * Default UiBottomSheet *** Ex1 ***
+            //     WidgetbookUseCase(
+            //         name: 'Default',
+            //         builder: (context) => UiBottomSheet(
+            //               title: 'Your Title',
+            //               bottomSheetContent: BottomSheetContent
+            //                   .radio, // ส่งค่า BottomSheetContent ไปที่ bottomSheetContent ใน UiBottomSheet
+            //               dissmiss: () {
+            //                 // Your dismiss logic here
+            //               },
+            //             )),
+            //   ],
+            // ),
+            // ---------------------------------------------------------------------
+            WidgetbookComponent(
+              name: 'Example UiBottomSheet',
+              useCases: [
+                // * Default UiBottomSheet *** Ex1 ***
+                WidgetbookUseCase(
+                    name: 'Default',
+                    builder: (context) => UiRadioButton(
+                          onSelected: (value) {
+                            // Handle the value here
+                          },
+                        )),
+              ],
+            ),
+            // ---------------------------------------------------------------------
           ],
         ),
       ],
